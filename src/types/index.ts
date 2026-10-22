@@ -1,3 +1,5 @@
+import React from 'react';
+
 // Create an AlertBox component that can display different types of alerts (success, error, warning, info) with customizable messages.
 
 export type AlertType = 'success' | 'error' | 'warning' | 'info';
