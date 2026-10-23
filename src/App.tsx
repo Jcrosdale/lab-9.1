@@ -28,20 +28,19 @@ export function App() {
     description: 'High-quality wireless headphones with noise cancellation.',
     imageUrl: 'https://example.com/headphones.jpg',
     inStock: true
-};
+  };
 
-// Render
+  // Render
   return (
     <div className="p-4">
       {showAlert && (
         // AlertBox Display
         <AlertBox
-        type="success"
-        message="Product added to cart!"
-        onClose={() => alert('Alert closed')}
+          type="success"
+          message="Product added to cart!"
+          onClose={() => alert('Alert closed')}
         >
           <p className="text-sm">You can now continue using the application.</p>
-        <p className="text-sm">You can now continue using the application.</p>
         </AlertBox>
       )}
 
@@ -60,9 +59,10 @@ export function App() {
 
         {/* Product Display */}
         <ProductDisplay product={product}
-        showDescription={true}
-        showStockStatus={true}
-        onAddToCart={(productId) => alert(`Added product ${productId} to cart`)}
+          showDescription={true}
+          showStockStatus={true}
+          // Displays alert box
+          onAddToCart={(handleAddToCart)}
         >
           <div className="text-sm text-gray-500">
             Free shipping available
